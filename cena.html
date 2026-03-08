@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú del Día</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="menu.js" defer></script>
+</head>
+
+<body>
+    
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel & Restaurante - Información</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* CONTENEDOR DEL TÍTULO */
+.logo-container{
+    margin-bottom:40px;   /* Espacio entre título y menú */
+}
+
+header{
+    background:#111;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;   /* ← clave */
+    padding:20px 40px;
+}
+/* CONTENEDOR DEL TÍTULO */
+.logo-container{
+    margin-bottom:20px;   /* Espacio entre título y menú */
+}
+
+.logo{
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+    text-align:left;   /* ← izquierda */
+}
+/* CONTENEDOR DEL MENÚ */
+.nav-container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;   /* ← centra el menú */
+    gap:40px;
+    list-style:none;
+    padding:0;
+    margin-top:20px;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#f5c542;
+}
+
+        .menu-section {
+            background-color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .menu-section h2 {
+            color: #8B0000;
+            margin-bottom: 20px;
+        }
+
+        .menu-container {
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+
+        .menu-item {
+            background-color: #f9f9f9;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-left: 5px solid #8B0000;
+            border-radius: 5px;
+        }
+
+        .rules-section {
+            background-color: #222;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .rules-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .rules-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .rules-container ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        .rules-container li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .menu-container, .rules-container {
+                padding: 0 10px;
+            }
+        }
+	body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.65);
+    min-height: 100vh;
+    padding: 60px 20px;
+}
+
+.menu-container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.fecha {
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 40px;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+}
+
+.seccion {
+    margin-bottom: 40px;
+}
+
+.seccion h2 {
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #f5c16c;
+}
+
+.plato {
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: 300;
+}
+
+.guarnicion {
+    font-size: 16px;
+    margin-top: 10px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.precio {
+    margin-top: 40px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.incluye {
+    margin-top: 8px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.aviso {
+    margin-top: 30px;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.horario {
+    margin-top: 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+    </style>
+</head>
+<body>
+
+   
+
+    <title>Menú de Cena</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+
+<div class="overlay">
+    <div class="menu-container">
+
+        <div class="fecha">07 · 03 · 2026</div>
+        <h1>MENÚ DE CENA</h1>
+
+        <div class="seccion">
+            <h2>Entrante</h2>
+            <div class="plato">ENTREMESES CALIENTES</div>
+            <div class="plato">SOPA DE POLLO</div>
+            <div class="plato">CREMA DE CALABACÍN</div>
+        </div>
+
+        <div class="seccion">
+            <h2>Principal</h2>
+            <div class="plato">CHULETAS DE SAJONIA A LA PLANCHA</div>
+            <div class="plato">BOQUERONES REBOZADOS</div>
+            <div class="plato">PECHUGA DE POLLO A LA PLANCHA</div>
+            <div class="guarnicion">Guarnición: Patatas fritas o ensalada</div>
+        </div>
+
+        <div class="seccion">
+            <h2>Postre</h2>
+            <div class="plato">Flan</div>
+            <div class="plato">Yogur</div>
+            <div class="plato">Manzana</div>
+            <div class="plato">Café</div>
+            <div class="plato">Infusión</div>
+        </div>
+
+        <div class="precio">17€ IVA incluido</div>
+        <div class="incluye">Botella de agua 0.5L y pan incluidos</div>
+
+        <div class="aviso">
+            No se permitirá, en ningún caso, el consumo de los menús en las habitaciones.
+        </div>
+
+        <div class="horario">
+            Horario de cenas · 20:30h — 23:00h
+        </div>
+
+    </div>
+</div>
+
+
+    <footer>
+        <p><strong>Hotel Ciudad de Navalcarnero</strong></p>
+        <p>Ctra. A5 Km. 28,2 (SALIDA 27) · 28600 Navalcarnero, Madrid · España</p>
+        <p>Tel: <a href="tel:+34918114767">+34 918 11 47 67</a></p>
+        <p>Email: <a href="mailto:info@hotelciudadnavalcarnero.com">info@hotelciudadnavalcarnero.com</a></p>
+        <p style="margin-top:20px;">© 2026 Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
