@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Carta Cafetería</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+}
+
+body{
+background:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0') no-repeat center center fixed;
+background-size:cover;
+color:white;
+}
+
+.overlay{
+background:rgba(0,0,0,0.65);
+min-height:100vh;
+padding:60px 20px;
+}
+
+.menu-container{
+max-width:800px;
+margin:auto;
+}
+
+h1{
+text-align:center;
+font-size:42px;
+letter-spacing:4px;
+margin-bottom:40px;
+}
+
+.menu-container h2{
+text-align:center;
+margin-top:40px;
+margin-bottom:20px;
+font-size:20px;
+letter-spacing:3px;
+color:#f5c16c;
+}
+
+.menu-container ul{
+list-style:none;
+padding:0;
+}
+
+.menu-container li{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 0;
+font-size:18px;
+border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+.menu-note{
+text-align:center;
+margin-top:40px;
+font-size:14px;
+}
+
+.horario{
+text-align:center;
+margin-top:15px;
+font-size:16px;
+}
+
+footer{
+background:black;
+text-align:center;
+padding:20px;
+font-size:14px;
+margin-top:40px;
+}
+
+footer a{
+color:#f5c16c;
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+<div class="menu-container">
+
+<h1>NORMATIVA</h1>
+
+	ES OBLIGATORIO PRESENTAR EL DNI/PASAPORTE PARA CIUDADANOS ESPAÑOLES, O PASAPORTE PARA EXTRANJEROS AL EFECTUAR EL REGISTRO DE ENTRADA POR REQUERIMIENTO POLICIAL.
+
+	LOS MENORES NO PODRÁN ALOJARSE SIN LA COMPAÑÍA DEL PADRE/MADRE/FIGURA TUTORA LEGAL (O SIN SU CONSENTIMIENTO ESCRITO) Y SU ESTANCIA EN CUALQUIERA DE LAS DEPENDENCIAS DEL HOTEL DEBERÁ ESTAR SUPERVISADA POR UN ADULTO. CUALQUIER DAÑO O DESPERFECTO CAUSADO POR ÉSTOS DEBERÁ SER ABONADO POR SU RESPONSABLE.
+
+o	1er BEBÉ (0-3 AÑOS): DESAYUNO GRATUITOS
+o	BEBÉS Y NIÑOS: ALOJAMIENTO SEGÚN TARIFA VIGENTE.
+	A PARTIR DE 3 AÑOS: DESAYUNO 9,00€ CONTRATANDOLO EN EL CHECK-IN O 10€ CONTRATANDOLO EN EL MOMENTO.
+
+	TODOS LOS PAGOS DEBERÁN SER EFECTUADOS EN EL MOMENTO. TANTO LAS CONSUMICIONES DEL BAR/RESTAURANTE COMO LAS HABITACIONES QUE DEBERÁN SER ABONADAS AL INGRESAR EN EL HOTEL.
+EL INCUMPLIMINETO A ESTA NORMA PERMITE AL HOTEL PROCEDER AL DESALOJO INMEDIATO DE SUS INSTALACIONES.
+
+	EN CASO DE PROLONGAR SU ESTANCIA SIN PREVIO AVISO MAS ALLÁ DE LAS 12:00 HORAS SE ENTENDERÁ QUE PROLONGA LA ESTANCIA UNA NOCHE MÁS, DEBIENDO ABONAR EL IMPORTE CORRESPONDIENTE DE LA HABITACIÓN SEGÚN LA TARIFA VIGENTE.
+
+	EL USO DEL APARCAMIENTO ESTÁ RESERVADO PARA USO EXCLUSIVO DE LOS CLIENTES DEL HOTEL.
+
+	ESTÁ PROHIBIDO FUMAR EN TODOS LOS ESPACIOS INTERIORES DE NUESTRAS INSTALACIONES (HABITACIONES Y ESTANCIAS COMUNES). SÍ ESTÁ PERMITIDO HACERLO EN LA ZONA EXTERIOR.
+
+	LA COMIDA DE FUERA DEL HOTEL NO ESTÁ PERMITIDA. PUEDEN HACER USO DE LA CAFETERÍA Y DEL RESTAURANTE JUNTO A RECEPCIÓN SI ASÍ LO DESEAN.
+
+	DEBERÁN RESPETARSE LAS NORMAS DE DECORO E HIGIENE DE SENTIDO COMÚN EN LAS ZONAS COMUNES INTERIORES Y EXTERIORES.
+
+	DEBERÁ RESPETARSE EL HORARIO DE SUEÑO COMPRENDIDO ENTRE LAS 23:00H Y LAS 07:00H PARA EL DESCANSO DE TODOS LOS HUÉSPEDES. (VOLUMEN DE TV, VOCES, ETC.)
+
+	EL HOTEL NO SE HACE RESPONSABLE DE OBJETOS OLVIDADOS O EXTRAVIADOS QUE NO HAYAN SIDO PUESTOS BAJO SU CUSTODIA.
+
+	HOTEL CIUDAD DE NAVALCARNERO SE RESERVA EL DERECHO DE ADMISIÓN EN SUS INSTALACIONES EN VIRTUD DE LO DISPUESTO EN EL ARTÍCULO 59.1 e) DEL REAL DECRETO 2816/1982 DEL 27 DE AGOSTO POR EL QUE SE APRUEBA EL REGLAMENTO GENERAL DE LA POLICÍA,
+QUEDANDO POR TANTO PROHIBIDA LA ENTRADA O PERMANENCIA A TODO AQUEL QUE:
+	INCLUMPLA LAS NORMAS ANTERIORES
+	SE ENCUENTRE EN ESTADO DE EMBRIAGUEZ
+	PORTE O SE ENCUENTRE BAJO LOS EFECTO DE CUALQUIER TIPO DE DROGA
+	PORTE CUALQUIER OBJETO SUSCEPTIBLE DE HACER DAÑO A PERSONAS O BIENES MATERIALES.
+	FALTA DE ASEO PERSONAL.
+	SEAN ALBOROTADORES COMPROBADOS.
+	PROVOQUE O INICIE CUALQUIER DESORDEN EN EL ESTABLECIMIENTO.
+
+LA INOBSERVANCIA DE CUALQUIERA DE ESTAS NORMAS PUEDE ACARREAR LA EXPULSIÓN DE NUESTRAS INSTALACIONES.
+
+</div>
+
+<footer>
+<p><strong>Hotel Ciudad de Navalcarnero</strong></p>
+<p>Ctra. A5 Km. 28,2 (SALIDA 27) · 28600 Navalcarnero, Madrid · España</p>
+<p>Tel: <a href="tel:+34918114767">+34 918 11 47 67</a></p>
+<p>Email: <a href="mailto:info@hotelciudadnavalcarnero.com">info@hotelciudadnavalcarnero.com</a></p>
+<p style="margin-top:20px;">© 2026 Todos los derechos reservados</p>
+</footer>
+
+</div>
+
+</body>
+</html>
