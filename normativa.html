@@ -2,151 +2,591 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Carta Cafetería</title>
+<title>Normativa | Hotel Ciudad de Navalcarnero</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
-background:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0') no-repeat center center fixed;
-background-size:cover;
-color:white;
+html {
+    scroll-behavior: smooth;
 }
 
-.overlay{
-background:rgba(0,0,0,0.65);
-min-height:100vh;
-padding:60px 20px;
+body {
+    color: #172633;
+
+    /* FONDO RECEPCIÓN DE HOTEL */
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.62),
+            rgba(0,0,0,0.62)
+        ),
+        url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2000&q=85")
+        center center / cover fixed no-repeat;
 }
 
-.menu-container{
-max-width:800px;
-margin:auto;
+/* CAPA PRINCIPAL */
+
+.overlay {
+    min-height: 100vh;
+    padding: 45px 20px 0;
 }
 
-h1{
-text-align:center;
-font-size:42px;
-letter-spacing:4px;
-margin-bottom:40px;
+/* CONTENEDOR */
+
+.menu-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.menu-container h2{
-text-align:center;
-margin-top:40px;
-margin-bottom:20px;
-font-size:20px;
-letter-spacing:3px;
-color:#f5c16c;
+/* CABECERA */
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
 }
 
-.menu-container ul{
-list-style:none;
-padding:0;
+.hotel-name {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
 }
 
-.menu-container li{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:10px 0;
-font-size:18px;
-border-bottom:1px solid rgba(255,255,255,0.2);
+.stars {
+    color: #d6a84f;
+    font-size: 18px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
 }
 
-.menu-note{
-text-align:center;
-margin-top:40px;
-font-size:14px;
+/* TITULO */
+
+h1 {
+    font-size: 46px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    margin-bottom: 12px;
 }
 
-.horario{
-text-align:center;
-margin-top:15px;
-font-size:16px;
+.title-line {
+    width: 100px;
+    height: 3px;
+    background: #d6a84f;
+    margin: 0 auto;
 }
 
-footer{
-background:black;
-text-align:center;
-padding:20px;
-font-size:14px;
-margin-top:40px;
+/* PANEL */
+
+.normativa {
+    background: rgba(255,255,255,0.94);
+    border: 1px solid rgba(214,168,79,0.8);
+    border-radius: 16px;
+    padding: 45px 55px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.35);
 }
 
-footer a{
-color:#f5c16c;
-text-decoration:none;
+/* NORMAS PRINCIPALES */
+
+.normas {
+    list-style: none;
+    counter-reset: normas;
+}
+
+.normas > li {
+    position: relative;
+    padding-left: 42px;
+    margin-bottom: 24px;
+    font-size: 15px;
+    line-height: 1.65;
+    text-align: justify;
+}
+
+.normas > li::before {
+    content: "◆";
+    position: absolute;
+    left: 3px;
+    top: 1px;
+    color: #c49335;
+    font-size: 13px;
+}
+
+/* SUBLISTAS */
+
+.sublista {
+    margin: 12px 0 0 20px;
+    padding-left: 20px;
+}
+
+.sublista li {
+    margin-bottom: 7px;
+    padding-left: 5px;
+    line-height: 1.5;
+}
+
+.sublista li::marker {
+    color: #c49335;
+}
+
+/* SEGUNDO NIVEL */
+
+.sublista-2 {
+    margin: 7px 0 0 25px;
+    padding-left: 20px;
+}
+
+.sublista-2 li {
+    margin-bottom: 5px;
+}
+
+/* DERECHO DE ADMISIÓN */
+
+.admision {
+    margin-top: 10px;
+}
+
+.admision > li {
+    margin-bottom: 6px;
+}
+
+/* TEXTO FINAL */
+
+.aviso-final {
+    margin-top: 30px;
+    padding: 20px 25px;
+    border-top: 2px solid #c49335;
+    border-bottom: 2px solid #c49335;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.6;
+    color: #172633;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 45px;
+    background: rgba(0,0,0,0.90);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer .hotel-footer {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 6px 0;
+    font-size: 13px;
+    color: rgba(255,255,255,0.85);
+}
+
+footer a {
+    color: #d6a84f;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 18px !important;
+    color: rgba(255,255,255,0.55) !important;
+}
+
+/* TABLET */
+
+@media (max-width: 800px) {
+
+    .overlay {
+        padding: 30px 15px 0;
+    }
+
+    .normativa {
+        padding: 35px 30px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .normas > li {
+        font-size: 14px;
+    }
+}
+
+/* MÓVIL */
+
+@media (max-width: 600px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+    .overlay {
+        padding: 25px 10px 0;
+    }
+
+    .hotel-name {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    h1 {
+        font-size: 32px;
+        letter-spacing: 4px;
+    }
+
+    .normativa {
+        padding: 25px 18px;
+        border-radius: 10px;
+    }
+
+    .normas > li {
+        padding-left: 28px;
+        font-size: 13px;
+        line-height: 1.55;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .normas > li::before {
+        left: 0;
+        font-size: 10px;
+    }
+
+    .sublista {
+        margin-left: 5px;
+        padding-left: 18px;
+    }
+
+    .sublista-2 {
+        margin-left: 10px;
+        padding-left: 18px;
+    }
+
+    .aviso-final {
+        font-size: 14px;
+        padding: 16px 10px;
+    }
+
+    footer {
+        margin-top: 30px;
+        padding: 25px 15px;
+    }
+
+    footer .hotel-footer {
+        font-size: 17px;
+    }
 }
 
 </style>
 </head>
 
+
 <body>
 
 <div class="overlay">
 
-<div class="menu-container">
+    <div class="menu-container">
 
-<h1>NORMATIVA</h1>
+        <!-- CABECERA -->
 
-	ES OBLIGATORIO PRESENTAR EL DNI/PASAPORTE PARA CIUDADANOS ESPAÑOLES, O PASAPORTE PARA EXTRANJEROS AL EFECTUAR EL REGISTRO DE ENTRADA POR REQUERIMIENTO POLICIAL.
+        <div class="header">
 
-	LOS MENORES NO PODRÁN ALOJARSE SIN LA COMPAÑÍA DEL PADRE/MADRE/FIGURA TUTORA LEGAL (O SIN SU CONSENTIMIENTO ESCRITO) Y SU ESTANCIA EN CUALQUIERA DE LAS DEPENDENCIAS DEL HOTEL DEBERÁ ESTAR SUPERVISADA POR UN ADULTO. CUALQUIER DAÑO O DESPERFECTO CAUSADO POR ÉSTOS DEBERÁ SER ABONADO POR SU RESPONSABLE.
+            <div class="hotel-name">
+                HOTEL CIUDAD DE NAVALCARNERO
+            </div>
 
-o	1er BEBÉ (0-3 AÑOS): DESAYUNO GRATUITOS
-o	BEBÉS Y NIÑOS: ALOJAMIENTO SEGÚN TARIFA VIGENTE.
-	A PARTIR DE 3 AÑOS: DESAYUNO 9,00€ CONTRATANDOLO EN EL CHECK-IN O 10€ CONTRATANDOLO EN EL MOMENTO.
+            <div class="stars">
+                ★ ★ ★ ★
+            </div>
 
-	TODOS LOS PAGOS DEBERÁN SER EFECTUADOS EN EL MOMENTO. TANTO LAS CONSUMICIONES DEL BAR/RESTAURANTE COMO LAS HABITACIONES QUE DEBERÁN SER ABONADAS AL INGRESAR EN EL HOTEL.
-EL INCUMPLIMINETO A ESTA NORMA PERMITE AL HOTEL PROCEDER AL DESALOJO INMEDIATO DE SUS INSTALACIONES.
+            <h1>NORMATIVA</h1>
 
-	EN CASO DE PROLONGAR SU ESTANCIA SIN PREVIO AVISO MAS ALLÁ DE LAS 12:00 HORAS SE ENTENDERÁ QUE PROLONGA LA ESTANCIA UNA NOCHE MÁS, DEBIENDO ABONAR EL IMPORTE CORRESPONDIENTE DE LA HABITACIÓN SEGÚN LA TARIFA VIGENTE.
+            <div class="title-line"></div>
 
-	EL USO DEL APARCAMIENTO ESTÁ RESERVADO PARA USO EXCLUSIVO DE LOS CLIENTES DEL HOTEL.
+        </div>
 
-	ESTÁ PROHIBIDO FUMAR EN TODOS LOS ESPACIOS INTERIORES DE NUESTRAS INSTALACIONES (HABITACIONES Y ESTANCIAS COMUNES). SÍ ESTÁ PERMITIDO HACERLO EN LA ZONA EXTERIOR.
 
-	LA COMIDA DE FUERA DEL HOTEL NO ESTÁ PERMITIDA. PUEDEN HACER USO DE LA CAFETERÍA Y DEL RESTAURANTE JUNTO A RECEPCIÓN SI ASÍ LO DESEAN.
+        <!-- NORMATIVA -->
 
-	DEBERÁN RESPETARSE LAS NORMAS DE DECORO E HIGIENE DE SENTIDO COMÚN EN LAS ZONAS COMUNES INTERIORES Y EXTERIORES.
+        <div class="normativa">
 
-	DEBERÁ RESPETARSE EL HORARIO DE SUEÑO COMPRENDIDO ENTRE LAS 23:00H Y LAS 07:00H PARA EL DESCANSO DE TODOS LOS HUÉSPEDES. (VOLUMEN DE TV, VOCES, ETC.)
+            <ul class="normas">
 
-	EL HOTEL NO SE HACE RESPONSABLE DE OBJETOS OLVIDADOS O EXTRAVIADOS QUE NO HAYAN SIDO PUESTOS BAJO SU CUSTODIA.
+                <!-- 1 -->
 
-	HOTEL CIUDAD DE NAVALCARNERO SE RESERVA EL DERECHO DE ADMISIÓN EN SUS INSTALACIONES EN VIRTUD DE LO DISPUESTO EN EL ARTÍCULO 59.1 e) DEL REAL DECRETO 2816/1982 DEL 27 DE AGOSTO POR EL QUE SE APRUEBA EL REGLAMENTO GENERAL DE LA POLICÍA,
-QUEDANDO POR TANTO PROHIBIDA LA ENTRADA O PERMANENCIA A TODO AQUEL QUE:
-	INCLUMPLA LAS NORMAS ANTERIORES
-	SE ENCUENTRE EN ESTADO DE EMBRIAGUEZ
-	PORTE O SE ENCUENTRE BAJO LOS EFECTO DE CUALQUIER TIPO DE DROGA
-	PORTE CUALQUIER OBJETO SUSCEPTIBLE DE HACER DAÑO A PERSONAS O BIENES MATERIALES.
-	FALTA DE ASEO PERSONAL.
-	SEAN ALBOROTADORES COMPROBADOS.
-	PROVOQUE O INICIE CUALQUIER DESORDEN EN EL ESTABLECIMIENTO.
+                <li>
+                    <strong>
+                    ES OBLIGATORIO PRESENTAR EL DNI/PASAPORTE PARA CIUDADANOS ESPAÑOLES,
+                    O PASAPORTE PARA EXTRANJEROS AL EFECTUAR EL REGISTRO DE ENTRADA
+                    POR REQUERIMIENTO POLICIAL.
+                    </strong>
+                </li>
 
-LA INOBSERVANCIA DE CUALQUIERA DE ESTAS NORMAS PUEDE ACARREAR LA EXPULSIÓN DE NUESTRAS INSTALACIONES.
+
+                <!-- 2 -->
+
+                <li>
+
+                    LOS MENORES NO PODRÁN ALOJARSE SIN LA COMPAÑÍA DEL
+                    PADRE/MADRE/FIGURA TUTORA LEGAL
+                    (O SIN SU CONSENTIMIENTO ESCRITO) Y SU ESTANCIA EN CUALQUIERA
+                    DE LAS DEPENDENCIAS DEL HOTEL DEBERÁ ESTAR SUPERVISADA POR UN ADULTO.
+
+                    CUALQUIER DAÑO O DESPERFECTO CAUSADO POR ÉSTOS DEBERÁ SER ABONADO
+                    POR SU RESPONSABLE.
+
+                    <ul class="sublista">
+
+                        <li>
+                            1er BEBÉ (0-3 AÑOS): <strong>DESAYUNO GRATUITO.</strong>
+                        </li>
+
+                        <li>
+                            BEBÉS Y NIÑOS: ALOJAMIENTO SEGÚN TARIFA VIGENTE.
+
+                            <ul class="sublista-2">
+
+                                <li>
+                                    A PARTIR DE 3 AÑOS:
+                                    DESAYUNO 9,00 € CONTRATÁNDOLO EN EL CHECK-IN
+                                    O 10,00 € CONTRATÁNDOLO EN EL MOMENTO.
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- 3 -->
+
+                <li>
+
+                    TODOS LOS PAGOS DEBERÁN SER EFECTUADOS EN EL MOMENTO.
+
+                    TANTO LAS CONSUMICIONES DEL BAR/RESTAURANTE COMO LAS HABITACIONES
+                    DEBERÁN SER ABONADAS AL INGRESAR EN EL HOTEL.
+
+                    <strong>
+                    EL INCUMPLIMIENTO DE ESTA NORMA PERMITE AL HOTEL PROCEDER
+                    AL DESALOJO INMEDIATO DE SUS INSTALACIONES.
+                    </strong>
+
+                </li>
+
+
+                <!-- 4 -->
+
+                <li>
+
+                    EN CASO DE PROLONGAR SU ESTANCIA SIN PREVIO AVISO MÁS ALLÁ
+                    DE LAS 12:00 HORAS, SE ENTENDERÁ QUE PROLONGA LA ESTANCIA
+                    UNA NOCHE MÁS, DEBIENDO ABONAR EL IMPORTE CORRESPONDIENTE
+                    DE LA HABITACIÓN SEGÚN LA TARIFA VIGENTE.
+
+                </li>
+
+
+                <!-- 5 -->
+
+                <li>
+
+                    EL USO DEL APARCAMIENTO ESTÁ RESERVADO PARA USO EXCLUSIVO
+                    DE LOS CLIENTES DEL HOTEL.
+
+                </li>
+
+
+                <!-- 6 -->
+
+                <li>
+
+                    ESTÁ PROHIBIDO FUMAR EN TODOS LOS ESPACIOS INTERIORES
+                    DE NUESTRAS INSTALACIONES
+                    (HABITACIONES Y ESTANCIAS COMUNES).
+
+                    SÍ ESTÁ PERMITIDO HACERLO EN LA ZONA EXTERIOR.
+
+                </li>
+
+
+                <!-- 7 -->
+
+                <li>
+
+                    LA COMIDA DE FUERA DEL HOTEL NO ESTÁ PERMITIDA.
+
+                    PUEDEN HACER USO DE LA CAFETERÍA Y DEL RESTAURANTE
+                    JUNTO A RECEPCIÓN SI ASÍ LO DESEAN.
+
+                </li>
+
+
+                <!-- 8 -->
+
+                <li>
+
+                    DEBERÁN RESPETARSE LAS NORMAS DE DECORO E HIGIENE
+                    DE SENTIDO COMÚN EN LAS ZONAS COMUNES INTERIORES Y EXTERIORES.
+
+                </li>
+
+
+                <!-- 9 -->
+
+                <li>
+
+                    DEBERÁ RESPETARSE EL HORARIO DE SUEÑO COMPRENDIDO
+                    ENTRE LAS 23:00 H Y LAS 07:00 H PARA EL DESCANSO
+                    DE TODOS LOS HUÉSPEDES.
+
+                    <br>
+
+                    <strong>
+                    (VOLUMEN DE TV, VOCES, ETC.)
+                    </strong>
+
+                </li>
+
+
+                <!-- 10 -->
+
+                <li>
+
+                    EL HOTEL NO SE HACE RESPONSABLE DE OBJETOS OLVIDADOS
+                    O EXTRAVIADOS QUE NO HAYAN SIDO PUESTOS BAJO SU CUSTODIA.
+
+                </li>
+
+
+                <!-- 11 -->
+
+                <li class="admision">
+
+                    HOTEL CIUDAD DE NAVALCARNERO SE RESERVA EL DERECHO
+                    DE ADMISIÓN EN SUS INSTALACIONES EN VIRTUD DE LO DISPUESTO
+                    EN EL ARTÍCULO 59.1 e) DEL REAL DECRETO 2816/1982,
+                    DEL 27 DE AGOSTO, POR EL QUE SE APRUEBA EL REGLAMENTO
+                    GENERAL DE LA POLICÍA.
+
+                    <br><br>
+
+                    QUEDA POR TANTO PROHIBIDA LA ENTRADA O PERMANENCIA
+                    A TODO AQUEL QUE:
+
+                    <ul class="sublista">
+
+                        <li>
+                            INCUMPLA LAS NORMAS ANTERIORES.
+                        </li>
+
+                        <li>
+                            SE ENCUENTRE EN ESTADO DE EMBRIAGUEZ.
+                        </li>
+
+                        <li>
+                            PORTE O SE ENCUENTRE BAJO LOS EFECTOS
+                            DE CUALQUIER TIPO DE DROGA.
+                        </li>
+
+                        <li>
+                            PORTE CUALQUIER OBJETO SUSCEPTIBLE DE HACER DAÑO
+                            A PERSONAS O BIENES MATERIALES.
+                        </li>
+
+                        <li>
+                            FALTA DE ASEO PERSONAL.
+                        </li>
+
+                        <li>
+                            SEAN ALBOROTADORES COMPROBADOS.
+                        </li>
+
+                        <li>
+                            PROVOQUE O INICIE CUALQUIER DESORDEN
+                            EN EL ESTABLECIMIENTO.
+                        </li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+
+
+            <!-- AVISO FINAL -->
+
+            <div class="aviso-final">
+
+                LA INOBSERVANCIA DE CUALQUIERA DE ESTAS NORMAS
+                PUEDE ACARREAR LA EXPULSIÓN DE NUESTRAS INSTALACIONES.
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p class="hotel-footer">
+            Hotel Ciudad de Navalcarnero
+        </p>
+
+        <p>
+            Ctra. A5 Km. 28,2 (SALIDA 27) · 28600 Navalcarnero,
+            Madrid · España
+        </p>
+
+        <p>
+            Tel:
+            <a href="tel:+34918114767">
+                +34 918 11 47 67
+            </a>
+        </p>
+
+        <p>
+            Email:
+            <a href="mailto:info@hotelciudadnavalcarnero.com">
+                info@hotelciudadnavalcarnero.com
+            </a>
+        </p>
+
+        <p class="copyright">
+            © 2026 Todos los derechos reservados
+        </p>
+
+    </footer>
 
 </div>
 
-<footer>
-<p><strong>Hotel Ciudad de Navalcarnero</strong></p>
-<p>Ctra. A5 Km. 28,2 (SALIDA 27) · 28600 Navalcarnero, Madrid · España</p>
-<p>Tel: <a href="tel:+34918114767">+34 918 11 47 67</a></p>
-<p>Email: <a href="mailto:info@hotelciudadnavalcarnero.com">info@hotelciudadnavalcarnero.com</a></p>
-<p style="margin-top:20px;">© 2026 Todos los derechos reservados</p>
-</footer>
-
-</div>
+</body>
+</html>
 
 </body>
 </html>
