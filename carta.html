@@ -1,8 +1,9 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Carta Cafetería</title>
+<title>Carta Cafetería - Hotel Ciudad de Navalcarnero</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -10,82 +11,206 @@
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
 }
 
 body{
-background:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0') no-repeat center center fixed;
-background-size:cover;
-color:white;
+    background:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0')
+    no-repeat center center fixed;
+    background-size:cover;
+    color:white;
 }
 
 .overlay{
-background:rgba(0,0,0,0.65);
-min-height:100vh;
-padding:60px 20px;
+    background:rgba(0,0,0,0.65);
+    min-height:100vh;
+    padding:60px 20px;
 }
 
 .menu-container{
-max-width:800px;
-margin:auto;
+    max-width:900px;
+    margin:auto;
 }
 
 h1{
-text-align:center;
-font-size:42px;
-letter-spacing:4px;
-margin-bottom:40px;
+    text-align:center;
+    font-size:42px;
+    letter-spacing:4px;
+    margin-bottom:40px;
 }
 
 .menu-container h2{
-text-align:center;
-margin-top:40px;
-margin-bottom:20px;
-font-size:20px;
-letter-spacing:3px;
-color:#f5c16c;
+    text-align:center;
+    margin-top:40px;
+    margin-bottom:20px;
+    font-size:20px;
+    letter-spacing:3px;
+    color:#f5c16c;
 }
 
 .menu-container ul{
-list-style:none;
-padding:0;
+    list-style:none;
+    padding:0;
 }
 
 .menu-container li{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:10px 0;
-font-size:18px;
-border-bottom:1px solid rgba(255,255,255,0.2);
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:20px;
+    padding:11px 0;
+    font-size:17px;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+.plato{
+    flex:1;
+    line-height:1.5;
+}
+
+/* PRECIO */
+
+.precio{
+    white-space:nowrap;
+    font-weight:500;
+    color:#f5c16c;
+}
+
+/* ALÉRGENOS */
+
+.alergenos{
+    display:inline-flex;
+    flex-wrap:wrap;
+    gap:4px;
+    margin-left:7px;
+    vertical-align:middle;
+}
+
+.alergeno{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:23px;
+    height:23px;
+    border-radius:50%;
+    background:#f5c16c;
+    color:#222;
+    font-size:11px;
+    font-weight:700;
+    cursor:help;
+    position:relative;
+    border:1px solid rgba(255,255,255,0.5);
+}
+
+/* INFORMACIÓN AL PASAR EL RATÓN */
+
+.alergeno:hover::after{
+    content:attr(data-nombre);
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#111;
+    color:white;
+    padding:7px 10px;
+    border-radius:5px;
+    font-size:12px;
+    font-weight:400;
+    white-space:nowrap;
+    z-index:20;
+    box-shadow:0 3px 10px rgba(0,0,0,0.5);
 }
 
 .menu-note{
-text-align:center;
-margin-top:40px;
-font-size:14px;
+    text-align:center;
+    margin-top:40px;
+    font-size:14px;
+    line-height:1.6;
 }
 
 .horario{
-text-align:center;
-margin-top:15px;
-font-size:16px;
+    text-align:center;
+    margin-top:15px;
+    font-size:16px;
+    color:#f5c16c;
+}
+
+.leyenda{
+    margin-top:45px;
+    padding:25px;
+    background:rgba(0,0,0,0.45);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:8px;
+}
+
+.leyenda h3{
+    text-align:center;
+    color:#f5c16c;
+    margin-bottom:20px;
+    letter-spacing:2px;
+}
+
+.leyenda-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+}
+
+.leyenda-item{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
 }
 
 footer{
-background:black;
-text-align:center;
-padding:20px;
-font-size:14px;
-margin-top:40px;
+    background:black;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+    margin-top:40px;
 }
 
 footer a{
-color:#f5c16c;
-text-decoration:none;
+    color:#f5c16c;
+    text-decoration:none;
+}
+
+/* MÓVIL */
+
+@media(max-width:600px){
+
+    .overlay{
+        padding:35px 15px;
+    }
+
+    h1{
+        font-size:28px;
+        letter-spacing:2px;
+    }
+
+    .menu-container li{
+        font-size:15px;
+        gap:10px;
+    }
+
+    .alergeno{
+        width:21px;
+        height:21px;
+        font-size:10px;
+    }
+
+    .leyenda-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .leyenda-item{
+        font-size:11px;
+    }
+
 }
 
 </style>
@@ -99,64 +224,498 @@ text-decoration:none;
 
 <h1>CARTA DE CAFETERÍA</h1>
 
+
+<!-- ================= ENTRANTES ================= -->
+
 <h2>ENTRANTES</h2>
+
 <ul>
-<li><span>Ensalada de la casa</span><span>8.50€</span></li>
-<li><span>Espárragos blancos con jamón york, mahonesa y guarnición de lechuga</span><span>8.00€</span></li>
-<li><span>Ensalada de pimientos, cebolla, tomate y atún</span><span>12.00€</span></li>
-<li><span>Crema de verdura, calabaza o calabacín</span><span>5.00€</span></li>
-<li><span>Sopa miso con arroz</span><span>5.00€</span></li>
-<li><span>Judías verdes rehogadas con ajitos y jamón</span><span>8.00€</span></li>
+
+<li>
+<div class="plato">
+Ensalada de la casa
+<span class="alergenos">
+<span class="alergeno" data-nombre="Huevos">H</span>
+<span class="alergeno" data-nombre="Mostaza">M</span>
+</span>
+</div>
+<span class="precio">8.50€</span>
+</li>
+
+<li>
+<div class="plato">
+Espárragos blancos con jamón york, mahonesa y guarnición de lechuga
+<span class="alergenos">
+<span class="alergeno" data-nombre="Huevos">H</span>
+<span class="alergeno" data-nombre="Mostaza">M</span>
+</span>
+</div>
+<span class="precio">8.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Ensalada de pimientos, cebolla, tomate y atún
+<span class="alergenos">
+<span class="alergeno" data-nombre="Pescado">P</span>
+</span>
+</div>
+<span class="precio">12.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Crema de verdura, calabaza o calabacín
+<span class="alergenos">
+<span class="alergeno" data-nombre="Leche">L</span>
+</span>
+</div>
+<span class="precio">5.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Sopa miso con arroz
+<span class="alergenos">
+<span class="alergeno" data-nombre="Soja">S</span>
+<span class="alergeno" data-nombre="Gluten">G</span>
+</span>
+</div>
+<span class="precio">5.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Judías verdes rehogadas con ajitos y jamón
+<span class="alergenos">
+<span class="alergeno" data-nombre="Sulfitos">SF</span>
+</span>
+</div>
+<span class="precio">8.00€</span>
+</li>
+
 </ul>
+
+
+<!-- ================= RACIONES ================= -->
 
 <h2>RACIONES</h2>
+
 <ul>
-<li><span>Queso manchego curado</span><span>14.00€</span></li>
-<li><span>Jamón serrano</span><span>14.00€</span></li>
-<li><span>Jamón serrano y queso manchego</span><span>14.00€</span></li>
-<li><span>Chorizo o salchichón (chorizo y salchichón)</span><span>11.00€</span></li>
-<li><span>Pincho de tortilla</span><span>5.00€</span></li>
-<li><span>Calamares a la romana</span><span>18.00€</span></li>
+
+<li>
+<div class="plato">
+Queso manchego curado
+<span class="alergenos">
+<span class="alergeno" data-nombre="Leche">L</span>
+</span>
+</div>
+<span class="precio">14.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Jamón serrano
+<span class="alergenos"></span>
+</div>
+<span class="precio">14.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Jamón serrano y queso manchego
+<span class="alergenos">
+<span class="alergeno" data-nombre="Leche">L</span>
+</span>
+</div>
+<span class="precio">14.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Chorizo o salchichón (chorizo y salchichón)
+<span class="alergenos">
+<span class="alergeno" data-nombre="Sulfitos">SF</span>
+</span>
+</div>
+<span class="precio">11.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Pincho de tortilla
+<span class="alergenos">
+<span class="alergeno" data-nombre="Huevos">H</span>
+</span>
+</div>
+<span class="precio">5.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Calamares a la romana
+<span class="alergenos">
+<span class="alergeno" data-nombre="Moluscos">MO</span>
+<span class="alergeno" data-nombre="Gluten">G</span>
+<span class="alergeno" data-nombre="Huevos">H</span>
+</span>
+</div>
+<span class="precio">18.00€</span>
+</li>
+
 </ul>
+
+
+<!-- ================= PLATO INDIVIDUAL ================= -->
 
 <h2>PLATO INDIVIDUAL</h2>
+
 <ul>
-<li><span>Cachopo de ternera con ensalada</span><span>10.00€</span></li>
-<li><span>Hamburguesa de buey con patatas</span><span>14.00€</span></li>
-<li><span>Lomo adobado con patatas, huevo y ensalada (incluye agua 0.5L y servicio de pan)</span><span>16.00€</span></li>
-<li><span>Filete de pollo con patatas, huevo y ensalada (incluye agua 0.5L y servicio de pan)</span><span>16.00€</span></li>
-<li><span>Salmón a la plancha con guarnición</span><span>16.00€</span></li>
-<li><span>Lubina al horno con guarnición</span><span>16.00€</span></li>
+
+<li>
+<div class="plato">
+Cachopo de ternera con ensalada
+<span class="alergenos">
+<span class="alergeno" data-nombre="Gluten">G</span>
+<span class="alergeno" data-nombre="Leche">L</span>
+<span class="alergeno" data-nombre="Huevos">H</span>
+</span>
+</div>
+<span class="precio">10.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Hamburguesa de buey con patatas
+<span class="alergenos">
+<span class="alergeno" data-nombre="Gluten">G</span>
+<span class="alergeno" data-nombre="Huevos">H</span>
+</span>
+</div>
+<span class="precio">14.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Lomo adobado con patatas, huevo y ensalada
+<span class="alergenos">
+<span class="alergeno" data-nombre="Huevos">H</span>
+</span>
+<br>
+<small>(incluye agua 0.5L y servicio de pan)</small>
+</div>
+<span class="precio">16.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Filete de pollo con patatas, huevo y ensalada
+<span class="alergenos">
+<span class="alergeno" data-nombre="Huevos">H</span>
+</span>
+<br>
+<small>(incluye agua 0.5L y servicio de pan)</small>
+</div>
+<span class="precio">16.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Salmón a la plancha con guarnición
+<span class="alergenos">
+<span class="alergeno" data-nombre="Pescado">P</span>
+</span>
+</div>
+<span class="precio">16.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Lubina al horno con guarnición
+<span class="alergenos">
+<span class="alergeno" data-nombre="Pescado">P</span>
+</span>
+</div>
+<span class="precio">16.00€</span>
+</li>
+
 </ul>
+
+
+<!-- ================= DULCES ================= -->
 
 <h2>DULCES</h2>
+
 <ul>
-<li><span>Yogur</span><span>2.00€</span></li>
-<li><span>Helado</span><span>3.50€</span></li>
-<li><span>Fruta natural (1 pieza)</span><span>1.00€</span></li>
-<li><span>Flan de huevo</span><span>2.00€</span></li>
+
+<li>
+<div class="plato">
+Yogur
+<span class="alergenos">
+<span class="alergeno" data-nombre="Leche">L</span>
+</span>
+</div>
+<span class="precio">2.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Helado
+<span class="alergenos">
+<span class="alergeno" data-nombre="Leche">L</span>
+<span class="alergeno" data-nombre="Huevos">H</span>
+</span>
+</div>
+<span class="precio">3.50€</span>
+</li>
+
+<li>
+<div class="plato">
+Fruta natural (1 pieza)
+</div>
+<span class="precio">1.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Flan de huevo
+<span class="alergenos">
+<span class="alergeno" data-nombre="Leche">L</span>
+<span class="alergeno" data-nombre="Huevos">H</span>
+</span>
+</div>
+<span class="precio">2.00€</span>
+</li>
+
 </ul>
+
+
+<!-- ================= PIZZAS ================= -->
 
 <h2>PIZZAS, BOCADILLOS Y SÁNDWICHES</h2>
+
 <ul>
-<li><span>Pizza de 4 quesos: mozzarella, provolone, emmental y queso azul</span><span>14.50€</span></li>
-<li><span>Pizza Tono: tomate, mozzarella, atún y cebolla</span><span>14.50€</span></li>
-<li><span>Pizza BBQ: pollo marinado, tomate, mozzarella, salsa barbacoa y cebolla</span><span>14.50€</span></li>
-<li><span>Pizza Margarita: mozzarella y tomate</span><span>14.50€</span></li>
-<li><span>Pizza Prosciutto: tomate, mozzarella y jamón cocido</span><span>14.50€</span></li>
-<li><span>Pizza Verde Grillate: tomate, mozzarella y verduras braseadas</span><span>14.50€</span></li>
-<li><span>Panini jamón y queso</span><span>5.00€</span></li>
-<li><span>Bocadillo de jamón serrano</span><span>9.00€</span></li>
-<li><span>Bocadillo de queso manchego semicurado</span><span>9.00€</span></li>
-<li><span>Bocadillo de chorizo y salchichón</span><span>7.00€</span></li>
-<li><span>Bocadillo de tortilla española</span><span>9.00€</span></li>
-<li><span>Croissant mixto jamón york y queso</span><span>5.00€</span></li>
-<li><span>Sándwich mixto jamón york y queso</span><span>4.50€</span></li>
-<li><span>Sándwich vegetal</span><span>5.00€</span></li>
+
+<li>
+<div class="plato">
+Pizza de 4 quesos: mozzarella, provolone, emmental y queso azul
+<span class="alergenos">
+<span class="alergeno" data-nombre="Gluten">G</span>
+<span class="alergeno" data-nombre="Leche">L</span>
+</span>
+</div>
+<span class="precio">14.50€</span>
+</li>
+
+<li>
+<div class="plato">
+Pizza Tono: tomate, mozzarella, atún y cebolla
+<span class="alergenos">
+<span class="alergeno" data-nombre="Gluten">G</span>
+<span class="alergeno" data-nombre="Leche">L</span>
+<span class="alergeno" data-nombre="Pescado">P</span>
+</span>
+</div>
+<span class="precio">14.50€</span>
+</li>
+
+<li>
+<div class="plato">
+Pizza BBQ: pollo marinado, tomate, mozzarella, salsa barbacoa y cebolla
+<span class="alergenos">
+<span class="alergeno" data-nombre="Gluten">G</span>
+<span class="alergeno" data-nombre="Leche">L</span>
+<span class="alergeno" data-nombre="Mostaza">M</span>
+</span>
+</div>
+<span class="precio">14.50€</span>
+</li>
+
+<li>
+<div class="plato">
+Pizza Margarita: mozzarella y tomate
+<span class="alergenos">
+<span class="alergeno" data-nombre="Gluten">G</span>
+<span class="alergeno" data-nombre="Leche">L</span>
+</span>
+</div>
+<span class="precio">14.50€</span>
+</li>
+
+<li>
+<div class="plato">
+Pizza Prosciutto: tomate, mozzarella y jamón cocido
+<span class="alergenos">
+<span class="alergeno" data-nombre="Gluten">G</span>
+<span class="alergeno" data-nombre="Leche">L</span>
+</span>
+</div>
+<span class="precio">14.50€</span>
+</li>
+
+<li>
+<div class="plato">
+Pizza Verde Grillate: tomate, mozzarella y verduras braseadas
+<span class="alergenos">
+<span class="alergeno" data-nombre="Gluten">G</span>
+<span class="alergeno" data-nombre="Leche">L</span>
+</span>
+</div>
+<span class="precio">14.50€</span>
+</li>
+
+<li>
+<div class="plato">
+Panini jamón y queso
+<span class="alergenos">
+<span class="alergeno" data-nombre="Gluten">G</span>
+<span class="alergeno" data-nombre="Leche">L</span>
+</span>
+</div>
+<span class="precio">5.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Bocadillo de jamón serrano
+<span class="alergenos">
+<span class="alergeno" data-nombre="Gluten">G</span>
+</span>
+</div>
+<span class="precio">9.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Bocadillo de queso manchego semicurado
+<span class="alergenos">
+<span class="alergeno" data-nombre="Gluten">G</span>
+<span class="alergeno" data-nombre="Leche">L</span>
+</span>
+</div>
+<span class="precio">9.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Bocadillo de chorizo y salchichón
+<span class="alergenos">
+<span class="alergeno" data-nombre="Gluten">G</span>
+<span class="alergeno" data-nombre="Sulfitos">SF</span>
+</span>
+</div>
+<span class="precio">7.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Bocadillo de tortilla española
+<span class="alergenos">
+<span class="alergeno" data-nombre="Gluten">G</span>
+<span class="alergeno" data-nombre="Huevos">H</span>
+</span>
+</div>
+<span class="precio">9.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Croissant mixto jamón york y queso
+<span class="alergenos">
+<span class="alergeno" data-nombre="Gluten">G</span>
+<span class="alergeno" data-nombre="Leche">L</span>
+<span class="alergeno" data-nombre="Huevos">H</span>
+</span>
+</div>
+<span class="precio">5.00€</span>
+</li>
+
+<li>
+<div class="plato">
+Sándwich mixto jamón york y queso
+<span class="alergenos">
+<span class="alergeno" data-nombre="Gluten">G</span>
+<span class="alergeno" data-nombre="Leche">L</span>
+</span>
+</div>
+<span class="precio">4.50€</span>
+</li>
+
+<li>
+<div class="plato">
+Sándwich vegetal
+<span class="alergenos">
+<span class="alergeno" data-nombre="Gluten">G</span>
+<span class="alergeno" data-nombre="Huevos">H</span>
+<span class="alergeno" data-nombre="Mostaza">M</span>
+</span>
+</div>
+<span class="precio">5.00€</span>
+</li>
+
 </ul>
 
+
+<!-- ================= LEYENDA ================= -->
+
+<div class="leyenda">
+
+<h3>ALÉRGENOS</h3>
+
+<div class="leyenda-grid">
+
+<div class="leyenda-item">
+<span class="alergeno">G</span>
+<span>Gluten</span>
+</div>
+
+<div class="leyenda-item">
+<span class="alergeno">L</span>
+<span>Leche</span>
+</div>
+
+<div class="leyenda-item">
+<span class="alergeno">H</span>
+<span>Huevos</span>
+</div>
+
+<div class="leyenda-item">
+<span class="alergeno">P</span>
+<span>Pescado</span>
+</div>
+
+<div class="leyenda-item">
+<span class="alergeno">MO</span>
+<span>Moluscos</span>
+</div>
+
+<div class="leyenda-item">
+<span class="alergeno">S</span>
+<span>Soja</span>
+</div>
+
+<div class="leyenda-item">
+<span class="alergeno">M</span>
+<span>Mostaza</span>
+</div>
+
+<div class="leyenda-item">
+<span class="alergeno">SF</span>
+<span>Sulfitos</span>
+</div>
+
+</div>
+
+</div>
+
+
 <div class="menu-note">
-<strong>(1) NO ESTÁ PERMITIDO EL CONSUMO DE ALIMENTOS EN LAS HABITACIONES, EXCEPTO LOS DE ESTA SECCIÓN.</strong>
+
+<strong>
+(1) NO ESTÁ PERMITIDO EL CONSUMO DE ALIMENTOS EN LAS HABITACIONES,
+EXCEPTO LOS DE ESTA SECCIÓN.
+</strong>
+
 </div>
 
 <div class="horario">
@@ -165,15 +724,42 @@ Horario de cenas · 20:30h — 23:00h
 
 </div>
 
+
 <footer>
+
 <p><strong>Hotel Ciudad de Navalcarnero</strong></p>
-<p>Ctra. A5 Km. 28,2 (SALIDA 27) · 28600 Navalcarnero, Madrid · España</p>
-<p>Tel: <a href="tel:+34918114767">+34 918 11 47 67</a></p>
-<p>Email: <a href="mailto:info@hotelciudadnavalcarnero.com">info@hotelciudadnavalcarnero.com</a></p>
-<p style="margin-top:20px;">© 2026 Todos los derechos reservados</p>
+
+<p>
+Ctra. A5 Km. 28,2 (SALIDA 27) ·
+28600 Navalcarnero, Madrid · España
+</p>
+
+<p>
+Tel:
+<a href="tel:+34918114767">
++34 918 11 47 67
+</a>
+</p>
+
+<p>
+Email:
+<a href="mailto:info@hotelciudadnavalcarnero.com">
+info@hotelciudadnavalcarnero.com
+</a>
+</p>
+
+<p style="margin-top:20px;">
+© 2026 Todos los derechos reservados
+</p>
+
 </footer>
 
 </div>
+
+</body>
+</html>
+```
+
 
 </body>
 </html>
